@@ -7,7 +7,7 @@ database <- read.table(file, header=TRUE, sep=";",stringsAsFactors=FALSE,  na.st
 dates <- c("1/2/2007", "2/2/2007")
 database_subset <- database[database$Date %in% dates, ]
 
-## now we open the device PNG 480 by 480 and plot there the GlobalActivePower in red color with corresponding title
+## now we open the device PNG 480 by 480 and make the histogram there the GlobalActivePower in red color with corresponding title
 
 png("plot1.png", width=480, height=480)
 hist(database_subset$Global_active_power, col="red", main="Global Active Power", xlab="Global Active Power (kilowatts)")
