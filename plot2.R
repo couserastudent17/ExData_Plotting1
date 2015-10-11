@@ -12,7 +12,7 @@ database_subset <- database[database$Date %in% dates, ]
 days <- strptime(paste(database_subset$Date, database_subset$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 gap <- as.numeric(database_subset$Global_active_power)
 
-## now we open the device PNG 480 by 480 and plot there the GlobalActivePower in red color with corresponding title
+## now we open the device PNG 480 by 480 and plot there the GlobalActivePower for the selected days
 
 png("plot2.png", width=480, height=480)
 plot(days, gap, type="l", xlab="", ylab="Global Active Power (kilowatts)")
